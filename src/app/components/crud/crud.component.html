@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="row">
+    <h5 class="heading">CRUD OPERATION</h5>
+    <div class="col-md-12 text-end">
+      <button class="add-button" (click)="addUser()">Add Data</button>
+    </div>
+    <div class="col-md-12 mt-2">
+      <table class="table table-sm">
+        <thead>
+          <tr>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Mobile</th>
+            <th scope="col">Gender</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let d of allData">
+            <td>{{d.firstName}}</td>
+            <td>{{d.lastName}}</td>
+            <td>{{d.email}}</td>
+            <td>{{d.mobile}}</td>
+            <td>{{d.gender}}</td>
+            <td>
+              <button class="btn btn-sm btn-primary me-2" (click)="updateData(d)">Edit</button>
+              <button class="btn btn-sm btn-danger" (click)="onDelete(d.id)">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

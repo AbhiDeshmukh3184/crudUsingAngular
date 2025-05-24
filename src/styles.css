@@ -1,0 +1,259 @@
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: monterret
+}
+
+section{
+  padding: 10px 15px 5px 15px
+}
+
+
+
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+html {
+    width: 100%;
+    background-color: #ffffff;
+}
+
+h1 {
+    font-size: 34pt;
+}
+
+h2 {
+    font-size: 26pt;
+}
+
+h3 {
+    font-size: 18pt;
+}
+
+h4 {
+  font-size: 14pt;
+}
+thead{
+  background-color: lavender;
+}
+
+.mat-dialog-container{
+  overflow: hidden !important;
+  padding: 28px !important;
+}
+.mat-form-field-flex {
+  background-color: #ffffff !important;
+}
+
+.select-custom{
+  display: inline-block;
+  width: 100%;
+  height: auto !important;
+  padding: 5px 5px 5px 10px !important;
+  font-size:12px !important;
+  color: #495057;
+  vertical-align: middle;
+  background: #fff url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 0.75rem center/8px 10px;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+.select-custom:focus {
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+.select-custom:focus::-ms-value {
+  color: #495057;
+  background-color: #fff;
+}
+.select-custom[multiple], .select-custom[size]:not([size="1"]) {
+  height: auto;
+  padding-right: 0.75rem;
+  background-image: none;
+}
+.select-custom:disabled {
+  color: #6c757d;
+  background-color: #e9ecef;
+}
+.select-custom::-ms-expand {
+  display: none;
+}
+.select-custom:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #495057;
+}
+
+.select-custom-sm {
+  height: calc(1.5em + 0.5rem + 2px);
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding-left: 0.5rem;
+  font-size: 0.875rem;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: 0.3rem;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.form-group{
+  margin-bottom: 0.9rem;
+}
+
+.custom-select-lg {
+  height: calc(1.5em + 1rem + 2px);
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  font-size: 1.25rem;
+}
+
+input[type=text]{
+  height:30px;
+  font-size:12px;
+}
+
+input[type=password]{
+  height:30px;
+  font-size:12px;
+}
+
+input[type=date]{
+  height:30px;
+  font-size:12px;
+}
+
+input[type=file]{
+  height:30px;
+  font-size:12px;
+  line-height: 1  !important;
+}
+
+.modal{
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.animated {
+  -webkit-animation-duration: 100ms;
+  -moz-animation-duration: 100ms;
+  animation-duration: 100ms;
+}
+
+.mat-raised-button:hover {
+  background: white;
+  color: black;
+}
+
+.mat-raised-button {
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 27px !important;
+  color: white !important;
+  letter-spacing: .4px;
+}
+
+.mat-flat-button{
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 30px !important;
+}
+
+.form-check-input {
+  position: absolute;
+  margin-top: 0.4rem !important;
+  margin-left: -1.25rem;
+}
+.example-section {
+  display: flex;
+  align-content: center;
+  height: 12px !important;
+}
+
+.mat-progress-bar {
+  height: 18px !important;
+  border-radius: 3px !important;
+}
+
+.progressbar-value{
+    position: absolute;
+    padding: 0px;
+    color: white;
+    font-size: 12px !important;
+}
+
+.close-button{
+  float: right;
+  top:-24px;
+  right:-24px;
+  font-size: 18px;
+}
+
+.close-icon {
+  transition: 1s ease-in-out;
+}
+
+.close-icon:hover {
+  transform: rotate(180deg);
+}
+
+::ng-deep .icon-outside .close-button{
+  float: right;
+  top:-52px;
+  right:-52px;
+}
+
+::ng-deep .icon-outside .mat-dialog-container {
+ overflow: unset
+}
+
+mat-icon{
+  cursor: pointer !important;
+  font-size: 19px !important;
+  height: 20px !important;
+}
+
+i{
+  font-size: 13px;
+  font-weight: 500;
+}
+
+
+
+.search-form{
+  background-color: white;
+}
+.box{
+  padding:10px;
+  box-shadow: 0px 0px 5px -2px;
+  border-radius: 5px;
+}
+.list-button{
+  margin-top: 29px;
+}
+.box span{
+  font-size: 13px;
+}
+
+label{
+  font-weight: 500;
+}
+.margin-top{
+  margin-top:29px
+}
+mat-icon{
+  cursor: pointer !important;
+  font-size: 19px !important;
+  height: 20px !important;
+}

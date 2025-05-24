@@ -1,0 +1,76 @@
+<h2 mat-dialog-title class="text-danger text-center">Information</h2>
+<mat-dialog-content>
+    <form [formGroup]="postForm">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label [ngClass]="{'text-danger':submitted && f.fname.errors}">First Name</label>
+                    <input type="text" class="form-control" formControlName="fname" placeholder="Enter First Name"
+                        (keypress)="onlyChar($event)" (input)="resetIfOnlySpaces('fname')"
+                        [ngClass]="{'is-invalid': submitted && f.fname.invalid,
+                                                   'is-valid': f.fname.valid}">
+                    <div class="text-danger" *ngIf="submitted && f.fname.errors">
+                        <i>First name is required</i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label [ngClass]="{'text-danger':submitted && f.lname.errors}">Last Name</label>
+                    <input type="text" class="form-control" formControlName="lname" placeholder="Enter First Name"
+                        (keypress)="onlyChar($event)" (input)="resetIfOnlySpaces('lname')"
+                        [ngClass]="{'is-invalid': submitted && f.lname.invalid,
+                                                   'is-valid': f.lname.valid}">
+                    <div class="text-danger" *ngIf="submitted && f.lname.errors">
+                        <i>Last name is required</i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label [ngClass]="{'text-danger':submitted && f.email.errors}">Email</label>
+                    <input type="text" class="form-control" formControlName="email" placeholder="xyz@gmail.com"
+                    [ngClass]="{'is-invalid': submitted && f.email.invalid,
+                                                   'is-valid': f.email.valid}">
+                    <div class="text-danger" *ngIf="submitted && f.email.errors">
+                        <i *ngIf="f.email.errors?.invalid">Email is required</i>
+                    </div>
+                    <i class="text-danger" *ngIf="f.email.errors?.pattern"><sup>*</sup>Enter valid email Id</i>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label [ngClass]="{'text-danger':submitted && f.mobile.errors}">Mobile</label>
+                    <input type="text" class="form-control" formControlName="mobile" placeholder="9999999999"
+                    [ngClass]="{'is-invalid': submitted && f.mobile.invalid,
+                                                   'is-valid': f.mobile.valid}">
+                    <div class="text-danger" *ngIf="submitted && f.mobile.errors">
+                        <i *ngIf="f.mobile.errors?.invalid">Mobile is required</i>
+                    </div>
+                     <i class="text-danger" *ngIf="f.mobile.errors?.pattern"><sup>*</sup>Enter valid mobile number</i>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label [ngClass]="{'text-danger':submitted && f.gender.errors}">Gender</label>
+                    <select class="form-control select-custom" formControlName="gender"
+                    [ngClass]="{'is-invalid': submitted && f.gender.invalid,
+                                                   'is-valid': f.gender.valid}">
+                        <option value="">-- Select Gender --</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <div class="text-danger" *ngIf="submitted && f.gender.errors">
+                        <i>Gender is required</i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button class="btn btn-sm btn-danger me-2" mat-dialog-close>Cancel</button>
+    <button class="btn btn-sm btn-success" (click)="onSubmit()">Submit</button>
+</mat-dialog-actions>
